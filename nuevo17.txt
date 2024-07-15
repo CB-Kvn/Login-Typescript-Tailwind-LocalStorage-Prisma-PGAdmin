@@ -1,0 +1,82 @@
+PS C:\Users\kvn-p\Desktop\Login\backend> npm init -y
+npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead.
+Wrote to C:\Users\kvn-p\Desktop\Login\backend\package.json:
+
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+
+PS C:\Users\kvn-p\Desktop\Login\backend> npm install @prisma/client prisma typescript ts-node @types/node express @types/express jsonwebtoken @types/jsonwebtoken bcryptjs @types/bcryptjs
+npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead.
+
+added 118 packages, and audited 119 packages in 2m
+
+12 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+npm notice
+npm notice New major version of npm available! 8.11.0 -> 10.8.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.8.1
+npm notice Run npm install -g npm@10.8.1 to update!
+npm notice
+PS C:\Users\kvn-p\Desktop\Login\backend> npx prisma init
+npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead.
+
+✔ Your Prisma schema was created at prisma/schema.prisma
+  You can now open it in your favorite editor.
+
+Next steps:
+1. Set the DATABASE_URL in the .env file to point to your existing database. If your database has no tables yet, read https://pris.ly/d/getting-started
+2. Set the provider of the datasource block in schema.prisma to match your database: postgresql, mysql, sqlite, sqlserver, mongodb or cockroachdb.
+3. Run prisma db pull to turn your database schema into a Prisma schema.
+4. Run prisma generate to generate the Prisma Client. You can then start querying your database.
+
+More information in our documentation:
+https://pris.ly/d/getting-started
+
+┌────────────────────────────────────────────────────────────────┐
+│  Developing real-time features?                                │
+│  Prisma Pulse lets you respond instantly to database changes.  │
+│  https://pris.ly/cli/pulse                                     │
+└────────────────────────────────────────────────────────────────┘
+
+PS C:\Users\kvn-p\Desktop\Login\backend> npx prisma migrate dev --name init
+npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead.
+Environment variables loaded from .env
+Prisma schema loaded from prisma\schema.prisma
+Datasource "db": PostgreSQL database "login_example", schema "public" at "localhost:5432"
+
+Error: P1001: Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+PS C:\Users\kvn-p\Desktop\Login\backend> npx prisma migrate dev --name init
+npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead.
+Environment variables loaded from .env
+Prisma schema loaded from prisma\schema.prisma
+Datasource "db": PostgreSQL database "login_example", schema "public" at "localhost:5432"
+
+Applying migration `20240710030550_init`
+
+The following migration(s) have been created and applied from new schema changes:
+
+migrations/
+  └─ 20240710030550_init/
+    └─ migration.sql
+
+Your database is now in sync with your schema.
+
+✔ Generated Prisma Client (v5.16.2) to .\node_modules\@prisma\client in 34ms
+
+
+PS C:\Users\kvn-p\Desktop\Login\backend>
